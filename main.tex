@@ -2,40 +2,43 @@
 % @Date:   2018-09-06 22:14:11
 % @Last Modified by:   Sky
 % @Last Modified time: 2019-01-25 22:45:08
+% arara: xelatex
 
-\documentclass{article}
+\documentclass{book}
+\usepackage{fontspec}
 \usepackage{polyglossia}
-%\usepackage{imakeidx}
+
+\usepackage{imakeidx}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=black, bookmarksopen=true, backref=true]{hyperref}
-%\hypersetup{
-%  hidelinks,
-%  unicode,  
+\hypersetup{
+  hidelinks,
+  unicode,  
   % linktocpage,
-%}
-\usepackage{glossaries}
+}
+\usepackage[nomain, toc]{glossaries}
+\usepackage{bookmark}
+\usepackage{acronym}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+% \usepackage[left=.7in, top=1in, right=.7in, bottom=1in]{geometry}
+
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
 
 % SANSKRIT:	Raghindi, Saraswati 5, Saraswati5
 % GUJARATI:	Vijaya, Saraswati 5, Saraswati5, Rekha, RaghuGujarati, Lohit Gujarati, Kalapi, Gurjari
 % HINDI:	Saraswati 5, Saraswati5, Ketan
 % \setmainfont{Ketan}
-%\defaultfontfeatures{Ligatures=TeX}
-%\setmainfont{FreeSans}
-\newfontfamily\sanskritfont{FreeSans}
-%\newfontfamily\englishfont{Arial}
-
-
-\newglossary[default.log]{default}{default.in}{default.out}{Terms}
-\makeglossaries
-\loadglsentries{TeX_gls/default}
+% \defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Nakula}
 
 \setdefaultlanguage{sanskrit}
+\setotherlanguage{english}
 
 
 \begin{document}
 \tableofcontents
 
 \include{body}
-
-\printglossary[title=Terms, toctitle=List of Terms, type=default]
 
 \end{document}

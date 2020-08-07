@@ -1,0 +1,2 @@
+\select@language {sanskrit}
+\contentsline {chapter}{\numberline {1}अथ प्रथमो डध्यायः}{3}{chapter.1}% 
